@@ -1,0 +1,6 @@
+[submodule "React_learning"]
+	path = React_learning
+	url = https://github.com/vantrong2405/React_learning.git
+[submodule "todo-list"]
+	path = todo-list
+	url = https://github.com/vantrong2405/todo-list.git
