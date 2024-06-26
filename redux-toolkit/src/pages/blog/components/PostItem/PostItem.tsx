@@ -1,21 +1,25 @@
 import { Post } from '../../../../types/blog.type'
+interface PostItemType {
+  post: Post
+}
 
-export default function PostItem() {
+export default function PostItem({ post }: PostItemType) {
+  console.log("......", post);
+
   return (
     <div className='flex flex-col items-center overflow-hidden rounded-lg border md:flex-row'>
       <div className='group relative block h-48 w-full shrink-0 self-start overflow-hidden bg-gray-100 md:h-full md:w-32 lg:w-48'>
         <img
-          src='https://fileinfo.com/img/ss/xl/jpg_44-2.jpg'
+          src={post.featuredImage}
           loading='lazy'
-          alt='123'
+          alt={post.title}
           className='absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110'
         />
       </div>
       <div className='flex flex-col gap-2 p-4 lg:p-6'>
-        <span className='text-sm text-gray-400'>Muốn thành công thì khao khát thành công phải lớn hơn nỗi sợ bị thất bại.</span>
-        <h2 className='text-xl font-bold text-gray-800'>Bạn chớ nên bỏ cuộc khi bạn vẫn còn điều gì đó để cho đi. Không có gì là hoàn toàn bế tắc, sự việc chỉ thật sự trở nên bế tắc khi bạn thôi không cố gắng nữa',
-          featuredImage</h2>
-        <p className='text-gray-500'></p>
+        <span className='text-sm text-gray-400'>{post.publishDate}</span>
+        <h2 className='text-xl font-bold text-gray-800'>{post.title}</h2>
+        <p className='text-gray-500'>{post.description}</p>
         <div>
           <div className='inline-flex rounded-md shadow-sm' role='group'>
             <button
