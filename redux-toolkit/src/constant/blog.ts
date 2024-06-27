@@ -1,5 +1,4 @@
-
-export const initalPostList = [
+export const initialPostList = [
   {
     description:
       'Nghịch cảnh là một phần của cuộc sống. Nó không thể bị kiểm soát. Cái có thể kiểm soát chính là cách chúng ta phản ứng trước nghịch cảnh.\n',
