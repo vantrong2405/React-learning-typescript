@@ -1,4 +1,3 @@
-import { Post } from '../../../../types/blog.type'
 
 export default function PostItem() {
   return (

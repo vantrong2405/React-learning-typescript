@@ -1,7 +1,5 @@
 import { Fragment, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { RootState } from '../../../../store'
-import { Post } from '../../../../types/blog.type'
 
 export default function CreatePost() {
   return (
