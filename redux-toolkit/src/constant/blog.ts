@@ -1,6 +1,5 @@
-import { Post } from '../types/blog.type'
 
-export const initalPostList: Post[] = [
+export const initalPostList = [
   {
     description:
       'Nghịch cảnh là một phần của cuộc sống. Nó không thể bị kiểm soát. Cái có thể kiểm soát chính là cách chúng ta phản ứng trước nghịch cảnh.\n',

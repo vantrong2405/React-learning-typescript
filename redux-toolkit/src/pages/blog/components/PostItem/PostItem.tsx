@@ -1,10 +1,3 @@
-import { Post } from '../../../../types/blog.type'
-interface PostItemType {
-  post: Post
-}
-
-export default function PostItem({ post }: PostItemType) {
-  console.log("......", post);
 
   return (
     <div className='flex flex-col items-center overflow-hidden rounded-lg border md:flex-row'>
