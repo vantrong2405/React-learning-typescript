@@ -11,7 +11,10 @@ export default function Students() {
   const page = Number(queryString.page) || 1
   const { data, isLoading } = useQuery({
     queryKey: ['students', page],
-    queryFn: () => getStudents(page, 10)
+    queryFn: () => getStudents(page, 10),
+    staleTime: 60 * 1000,// data cũ thì nó cập nhật , mới thì nó k cập nhật , staleTime = 60s -> tức là giữ cho data mới 60 giây khi lưu vào bộ nhớ đệm 
+    cacheTime: 5 * 1000,// sau 5 giây xóa khỏi bộ nhớ đệm , lúc này dù data mới hay cũ vẫn fetch lại
+    keepPreviousData: true,//giữ lại previos stale khiến cho ko bị loading
   })
   const totalStudentCount = Number(data?.headers['x-total-count']) || 0
   const totalPage = Number(totalStudentCount / LIMIT) | 0
